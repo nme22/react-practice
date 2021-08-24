@@ -7,6 +7,9 @@ import './index.css';
 //Lifecycle
 //UI
 
+// When using modules, we need a module bundler so the browser can understand.
+// When using jsx we need a compiler to translate our jsx into normal javascript syntax that the browser can understand.
+
 class App extends React.Component{
     render() {
         return (
