@@ -1,9 +1,10 @@
 {
-  "name": "react-practice",
+  "name": "github-battle",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve",
     "build": "webpack"
   },
   "babel": {
@@ -12,31 +13,31 @@
       "@babel/preset-react"
     ]
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack-dev-server": "^3.11.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nme22/react-practice.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/nme22/react-practice/issues"
   },
-  "homepage": "https://github.com/nme22/react-practice#readme",
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.2",
-    "style-loader": "^3.2.1",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0"
-  }
+  "homepage": "https://github.com/nme22/react-practice#readme"
 }
