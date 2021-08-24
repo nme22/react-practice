@@ -13,7 +13,7 @@ import './index.css';
 class App extends React.Component{
     render() {
         return (
-        <div> Hello World! </div>
+        <div> Hello Navid! </div>
         )
     }
 };
@@ -21,6 +21,6 @@ class App extends React.Component{
 ReactDOM.render(
     <App/>,
     //Where do we want to render this element to?
-    document.getElementById('app')
+    document.getElementById('App')
 );
 
