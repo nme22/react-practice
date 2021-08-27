@@ -5,7 +5,9 @@ class Hello extends React.Component {
         console.log(this.props)
         return(
             <h2>
-                Hello, {this.props.name}
+                {this.props.header} {this.props.username} 
+                
+                {this.props.authed === true ? <button onClick={this.props.logout}>Logout</button> : null}
             </h2>
         )
     }
