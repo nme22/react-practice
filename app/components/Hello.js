@@ -6,10 +6,20 @@ class Hello extends React.Component {
        this.state = {
            name: 'Navid'
        }
+       this.updateName = this.updateName.bind(this)
+   }
+   updateName() {
+       this.setState({
+           name: 'Sandweaver'
+       })
    }
    render(){
        return(
-           <h1>Hello, {this.state.name}</h1>
+           <React.Fragment>
+               <h1>Hello, {this.state.name}</h1>
+               <button onClick={this.updateName}> Change name</button>
+            </React.Fragment>
+           
        )
    }
 }
