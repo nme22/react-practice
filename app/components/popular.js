@@ -56,9 +56,9 @@ export default class Popular extends React.Component {
                 error: 'There was an error fetching the repositories.'
             })
         })
-        isLoading() {
-            return this.state.repos === null && this.state.error === null
-        }
+    }
+    isLoading() {
+        return this.state.repos === null && this.state.error === null
     }
     render() {
         const { selectedLanguage, repos, error } = this.state
