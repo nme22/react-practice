@@ -45,7 +45,7 @@ function ReposGrid ({ repos }) {
                         </h2>
                         <ul className='card-list'>
                             <li>
-                                <FaUser color='rgb(255,191,116)' size={22}/>
+                                <FaUser color='rgb(255, 191, 116)' size={22}/>
                                 <a href={`https://github.com/${login}`}>
                                     {login}
 
@@ -53,18 +53,18 @@ function ReposGrid ({ repos }) {
                             </li>
 
                             <li>
-                                <FaStar color='rgb(255,215,0)' size={22}/>
-                                {stargazers_count.toLocalString()} stars
+                                <FaStar color='rgb(255, 215, 0)' size={22}/>
+                                {stargazers_count.toLocaleString()} stars
                             </li>
 
                              <li>
-                             <FaCodeBranch color='rgb(129,195,245)' size={22}/>
-                                {forks.toLocalString()} forks
+                             <FaCodeBranch color='rgb(129, 195, 245)' size={22}/>
+                                {forks.toLocaleString()} forks
                             </li>
 
                             <li>
-                            <FaExclamationTriangle color='rgb(241,138,147)' size={22}/>
-                                {open_issues.toLocalString()} open_issues
+                            <FaExclamationTriangle color='rgb(241, 138, 147)' size={22}/>
+                                {open_issues.toLocaleString()} open_issues
                             </li>
                         </ul>
 
