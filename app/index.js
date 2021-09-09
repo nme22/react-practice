@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Badge from './components/badge';
-import Hello from './components/Hello';
 import Popular from './components/popular';
+import Battle from './components/battle';
 import './index.css';
 
 //Component
@@ -17,7 +16,7 @@ class App extends React.Component{
     render() {
         return (
         <div className='container'> 
-            <Popular/>
+            <Battle/>
         </div>
         )
     }
