@@ -120,6 +120,7 @@ export default class Battle extends React.Component {
     this.state = {
       playerOne: null,
       playerTwo: null,
+      battle: false
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -136,7 +137,7 @@ export default class Battle extends React.Component {
     })
   }
   render() {
-    const { playerOne, playerTwo, Battle } = this.state
+    const { playerOne, playerTwo, battle } = this.state
 
     if (battle === true) {
         return <Results playerOne={playerOne} playerTwo={playerTwo}/>
@@ -177,8 +178,10 @@ export default class Battle extends React.Component {
             {playerOne && playerTwo && (
                 <button
                 className='btn dark-btn btn-space'
-                onClick={ () => this.setState({battle: true})}
-                />
+                onClick={() => this.setState({battle: true})}
+                >
+                    Battle
+                </button>
             )}
 
         </div>
