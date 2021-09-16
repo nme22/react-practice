@@ -83,54 +83,43 @@ export default class Results extends React.Component {
                    
 
                
-
-                <div className='card bg-light'>
-                    <h4 className='header-lg center-txt'>
-                        {winner.score === loser.score ? 'Tie' : 'Loser'}
-                    </h4>
-                    <img
-                        className='avatar'
-                        src={loser.profile.avatar_url}
-                        alt={`Avatar for ${loser.profile.login}`}
-                    />
-                    <h4 className='center-text'>
-                        Score: {loser.score.toLocaleString()}
-                    </h4>
-                    <h2 className='center-text'>
-                        <a className='link' href={loser.profile.html_url}>
-                            {loser.profile.login}
-                        </a>
-                    </h2>
+                <Card
+                header={winner.score === loser.score ? 'Tie' : 'Loser'}
+                subHeader={`Score: ${loser.score.toLocaleString()}`}
+                avatar={loser.profile.avatar_url}
+                name={loser.profile.login}
+                href={loser.profile.html_url}
+                >
                     <ul className='card-list'>
+                    <li>
+                        <FaUser color='rgb(239, 115, 115)' size={22}/>
+                        {loser.profile.name}
+                    </li>
+                    {loser.profile.location && (
                         <li>
-                            <FaUser color='rgb(239, 115, 115)' size={22}/>
-                            {loser.profile.name}
+                            <FaCompass color='rgb(144, 115, 255)' size={22}/>
+                            {loser.profile.location}
                         </li>
-                        {loser.profile.location && (
-                            <li>
-                                <FaCompass color='rgb(144, 115, 255)' size={22}/>
-                                {loser.profile.location}
-                            </li>
-                        )}
-                        {loser.profile.company && (
-                            <li>
-                                <FaBriefcase color='#795548' size={22}/>
-                                {loser.profile.company}
-                            </li>
-                        )}
+                    )}
+                    {loser.profile.company && (
                         <li>
-                            <FaUsers color='rgb(129, 195, 245)' size={22}/>
-                            {loser.profile.followers.toLocaleString()} followers
+                            <FaBriefcase color='#795548' size={22}/>
+                            {loser.profile.company}
                         </li>
+                    )}
+                    <li>
+                        <FaUsers color='rgb(129, 195, 245)' size={22}/>
+                        {loser.profile.followers.toLocaleString()} followers
+                    </li>
 
-                        <li>
-                            <FaUsers color='rgb(64, 183, 95)' size={22}/>
-                            {loser.profile.following.toLocaleString()} following
-                        </li>
-                    </ul>
+                    <li>
+                        <FaUsers color='rgb(64, 183, 95)' size={22}/>
+                        {loser.profile.following.toLocaleString()} following
+                    </li>
+                </ul>
 
+                </Card>
                 </div>
-            </div>
         )
     }
 }
