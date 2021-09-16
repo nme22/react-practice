@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Popular from './components/popular';
 import Battle from './components/battle';
 import './index.css';
+import { ProvidePlugin } from 'webpack';
 
 //Component
 //State
@@ -16,7 +17,7 @@ class App extends React.Component{
     render() {
         return (
         <div className='container'> 
-            <Battle/>
+            <Popular/>
         </div>
         )
     }

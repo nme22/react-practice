@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function Card ({header, subHeader, avatar, href, name}) {
+export default function Card ({header, subHeader, avatar, href, name, children}) {
 return (
     <div className='card bg-light'>
          <h4 className='header-lg center-txt'>
@@ -12,7 +12,7 @@ return (
                 src={avatar}
                 alt={`Avatar for ${name}`}
             />
-            {subheader && (
+            {subHeader && (
             <h4 className='center-text'>
                {subHeader}
             </h4>
@@ -22,14 +22,14 @@ return (
                     {name}
                 </a>
             </h2>
-            { children }
+            {children}
     </div>
     )
 }
 
-Card.PropTypes = {
+Card.propTypes = {
     header: PropTypes.string.isRequired,
-    subheader: PropTypes.string,
+    subHeader: PropTypes.string,
     avatar: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired
