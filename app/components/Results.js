@@ -6,9 +6,11 @@ import PropTypes from 'prop-types'
 import Loading from './Loading'
 
 
-function ProfileList ({profile}) {
-    return(
-        <ul className='card-list'>
+class ProfileList extends React.Component {
+    render() {
+        const {profile} =this.props
+        return (
+            <ul className='card-list'>
             <li>
                 <FaUser color='rgb(239, 115, 115)' size={22}/>
                 {profile.name}
@@ -37,7 +39,9 @@ function ProfileList ({profile}) {
          </ul>
                         
     )
+    }
 }
+
 
 ProfileList.propTypes ={
     profile: PropTypes.object.isRequired,
